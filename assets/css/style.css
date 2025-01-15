@@ -1,0 +1,356 @@
+/* ----- General ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-size: 18px;
+  color: var(--color-text) !important;
+  font-family: 'Catamaran', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text) !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+  cursor: default;
+}
+
+img {
+  pointer-events: none;
+}
+
+input, select {
+  border: 1px var(--color-text) solid !important;
+}
+
+/* ----- Extra ----- */
+:root {
+  --color-bg: #dcdad7;
+  --color-text: #5e666a;
+  --color-text-hover: #383d3f;
+  --color-prod: #d2cfcb;
+  --color-prod-title: #383d3f;
+  --color-prod-subtitle: #5d6468;
+  --color-prod-content: #827c72;
+}
+
+*::-webkit-scrollbar {
+  width: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #d2cfcb;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #595b5d;
+  border-radius: 0px;
+  border: 0px none #ffffff;
+}
+
+/* ---- Cursor ----- */
+.cursor-no {
+  cursor: no-drop;
+}
+
+.cursor-normal {
+  cursor: default;
+}
+
+/* ---- Header ----- */
+.bg-header {
+  background-color: var(--color-bg);
+}
+
+.border-b li a {
+  padding: 0 5px 3px;
+  margin: 0 5px;
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.border-b-hover li a {
+  border-bottom: 1px solid transparent;
+  transition: all ease .3s;
+}
+
+.border-b-hover li a:hover {
+  border-bottom: 1px solid var(--color-text-hover);
+  color: var(--color-text-hover) !important;
+}
+
+.menu-hover li a {
+  border-bottom: 0;
+  padding: 0 10px;
+  margin: 0;
+  font-weight: 100;
+}
+
+.menu-hover li a:hover {
+  border-bottom: 0;
+}
+
+.drop-title {
+  font-weight: bold !important;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.box-s {
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, .2);
+}
+
+/* ----- Video ----- */
+.wallpapar-wine {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.wallpapar-wine img {
+  width: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+  opacity: .5;
+}
+
+.text-video {
+  width: 100%;
+  height: 900px;
+}
+
+/* ----- Social ----- */
+.social li a {
+  border-radius: 5px !important;
+  margin: 0 2px;
+}
+
+.social .facebook {
+  padding: 1px 5px !important;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.social .facebook i {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social .instagram {
+  padding: 1px 5px !important;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.social .instagram i {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social .twitter {
+  padding: 0 5px !important;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.social .twitter i {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.facebook,
+.instagram,
+.twitter {
+  transition: all ease .5s;
+  color: #000 !important;
+}
+
+.facebook:hover {
+  background-color: #1877f2;
+  color: #fff !important;
+}
+
+.instagram:hover {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+  color: #fff !important;
+}
+
+.twitter:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+
+/* ----- Prodotti Home ----- */
+.prod {
+  /* width: 480px; */
+  color: #ffffff;
+}
+
+.prod-info:hover {
+  opacity: 100%;
+}
+
+.prod img {
+  width: 100%;
+}
+
+.prod button {
+  background-color: var(--color-text);
+  color: #fff;
+}
+
+.prod button:hover {
+  background-color: var(--color-text-hover);
+}
+
+.prod-content {
+  /* width: 480px;
+  height: 480px; */
+  background-color: var(--color-prod);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod-content-title {
+  color: var(--color-prod-title);
+  font-family: 'Playfair Italic', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.prod-content-subtitle {
+  color: var(--color-prod-subtitle);
+  font-family: 'Playfair', sans-serif;
+  padding: 0px 20px;
+}
+
+.prod-content-content {
+  color: var(--color-prod-content);
+}
+
+.divider-prod {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-prod-title);
+  margin: 10px 0;
+}
+
+.divider-sm {
+  background-color: #b5b0aa;
+  width: 60px;
+  height: 1px;
+}
+
+.divider-wine {
+  height: 3px;
+  width: 300px;
+  background-color: #383d3f;
+  margin: 20px 0;
+}
+
+/* ----- My font ----- */
+.title-elegant {
+  font-size: 50px;
+  color: var(--color-prod-title);
+  font-family: 'Playfair Italic', sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.italic {
+  font-family: 'Playfair Italic', sans-serif;
+}
+
+/* ----- Codes ----- */
+.gc102 {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.g5043 {
+  margin-top: 150px;
+}
+
+/* ----- Footer ----- */
+.color-footer {
+  background-color: var(--color-prod);
+}
+
+.logo-footer {
+  width: 300px;
+}
+
+.logo-footer img {
+  width: 100%;
+}
+
+.category-wine {
+  color: #242829;
+}
+
+.undertitle-wine {
+  color: var(--color-prod-title) ;
+}
+
+.btn-wine {
+  color: #fff !important;
+}
+
+/* ----- Prodotti ----- */
+.img-wine {
+  height: 800px;
+}
+
+.img-wine img {
+  height: 100%;
+}
+
+
+.divider-nav {
+  border-bottom: 1px #000 solid !important;
+  margin-bottom: 10px !important;
+}

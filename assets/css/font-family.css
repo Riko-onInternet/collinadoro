@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Catamaran';
+  src: url(../font/catamaran-variablefont_wght-webfont.woff2) format('woff2'),
+       url(../font/catamaran-variablefont_wght-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Playfair Italic';
+  src: url(../font/playfairdisplay-italic-variablefont_wght-webfont.woff2) format('woff2'),
+       url(../font/playfairdisplay-italic-variablefont_wght-webfont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Playfair';
+  src: url(../font/playfairdisplay-variablefont_wght-webfont.woff2) format('woff2'),
+       url(../font/playfairdisplay-variablefont_wght-webfont.woff) format('woff');
+}

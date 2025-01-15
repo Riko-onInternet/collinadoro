@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it-IT" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cantina Collina d'Oro | Tradizione, amore e passione</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+
+  <link rel="stylesheet" href="../assets/css/unicons-regular-rounded.css">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
+  <link rel="stylesheet" href="../assets/css/all.css">
+  <link rel="stylesheet" href="../assets/css/font-family.css">
+  <link rel="stylesheet" href="../assets/css/media.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="overflow-x-hidden" onload="creaNav(), createFooter()">
+  <div class="container-fluid p-0 g5043">
+    <div class="container p-0">
+      <div class="row g-0">
+        <div class="col-12 col-md-6 d-flex justify-content-center">
+          <div class="img-wine"><img src="../assets/img/vini/rose_brut_bio.png"></div>
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center mb-5 mt-5 mt-md-0">
+          <p class="title-elegant">Rosè spumante brut Bio (10,5°)</p>
+
+          <div class="divider-wine"></div>
+
+          <p><span class="category-wine fw-bolder">Conservazione:&nbsp;</span> 16 – 18 °C</p>
+          <p><span class="category-wine fw-bolder">Abbinamenti:&nbsp;</span> Ottimo come aperitivo e come vino da conversazione ma anche a tutto pasto per accompagnare antipasti, tutti i piatti della cucina mediterranea, pesce e verdure.</p>
+          <p><span class="category-wine fw-bolder">Taffinamento:&nbsp;</span> In bottiglia</p>
+          <p><span class="category-wine fw-bolder">Annata:&nbsp;</span> S.A. (Senza Anno)</p>
+          <p><span class="category-wine fw-bolder">Denominazione vino:&nbsp;</span> Cococciola spumante brut</p>
+          <p><span class="category-wine fw-bolder">Tipo di uva:&nbsp;</span> 50% Trebbiano e 50% Montepulciano</p>
+          <p><span class="category-wine fw-bolder">Temperatura di servizio:&nbsp;</span> 6 – 8°C</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid pt-4 my-5">
+    <div class="container">
+      <div>
+        <p class="title-elegant">Richiesta informazioni del prodotto</p>
+      </div>
+
+      <div class="form-check" id="c1">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkboxPriv" onclick="checkboxPriv()">
+        <label class="form-check-label" for="checkboxPriv">
+          Privato
+        </label>
+      </div>
+
+      <div class="form-check" id="c2">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="checkboxAzie" onclick="checkboxAzie()">
+        <label class="form-check-label" for="checkboxAzie">
+          Azienda
+        </label>
+      </div>
+
+      <form class="d-none row mt-3" id="formPriv"> <!-- privato -->
+        <div class="row g-3">
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" placeholder="Mario" id="nome">
+            <p class="d-none text-danger" id="nameError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="nameCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Cognome</label>
+            <input type="text" class="form-control" placeholder="Rossi" id="cognome">
+            <p class="d-none text-danger" id="cognomeError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="cognomeCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Indirizzo</label>
+            <div class="input-group">
+              <span class="input-group-text border-0">Via</span>
+              <input type="text" class="form-control" placeholder="della Ricostruzione, 98" id="via">
+            </div>
+            <p class="d-none text-danger" id="viaError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="viaCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Città</label>
+            <input type="text" class="form-control" placeholder="Ortona" id="citta">
+            <p class="d-none text-danger" id="cittaError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="cittaCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Provincia</label>
+            <input type="text" class="form-control" placeholder="Chieti" id="provincia">
+            <p class="d-none text-danger" id="provinciaError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="provinciaCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Telefono</label>
+            <div class="input-group border-0">
+              <span class="input-group-text border-0">+39</span>
+              <input type="tel" class="form-control" placeholder="123 456 7890" id="tel" maxlength="10">
+            </div>
+            <p class="d-none text-danger" id="telError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="telCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder="example@email.com" id="emailPriv">
+            <p class="d-none text-danger" id="emailError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="emailCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-12 mt-2">
+            <p class="d-none text-danger" id="endError">Non hai inserito i dati correttamente</p>
+            <button type="button" class="btn btn-primary" onclick="checkFormPriv()">Invia richiesta</button>
+          </div>
+        </div>
+        <p class="d-none text-success fw-bold" id="endCorrect">Grazie per la richiesta! Risponderemo entro 24 ore alla email da lei inserito.</p>
+      </form>
+
+      <form class="d-none mt-3" id="formAzie"> <!-- azienda -->
+        <div class="row g-3">
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Azienda</label>
+            <input type="text" class="form-control" placeholder="Collina d'Oro" id="azienda">
+            <p class="d-none text-danger" id="aziendaError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="aziendaCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Referente</label>
+            <input type="text" class="form-control" placeholder="Andrea De Laurentis" id="referente">
+            <p class="d-none text-danger" id="referenteError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="referenteCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder="example@email.com" id="emailAzie">
+            <p class="d-none text-danger" id="emailAzieError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="emailAzieCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Indirizzo</label>
+            <div class="input-group">
+              <span class="input-group-text border-0">Via</span>
+              <input type="text" class="form-control" placeholder="della Ricostruzione, 98" id="viaAzie">
+            </div>
+            <p class="d-none text-danger" id="viaAzieError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="viaAzieCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Città</label>
+            <input type="text" class="form-control" placeholder="Ortona" id="cittaAzie">
+            <p class="d-none text-danger" id="cittaAzieError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="cittaAzieCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Provincia</label>
+            <input type="text" class="form-control" placeholder="Chieti" id="provAzie">
+            <p class="d-none text-danger" id="provinciaAzieError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="provinciaAzieCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-md-6 mb-2">
+            <label class="form-label">Telefono</label>
+            <div class="input-group border-0">
+              <span class="input-group-text border-0">+39</span>
+              <input type="tel" class="form-control" placeholder="123 456 7890" id="telAzie">
+            </div>
+            <p class="d-none text-danger" id="telAzieError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="telAzieCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class=" col-sm-5 col-md-2 mb-2">
+            <label class="form-label">Quantità</label>
+            <input type="number" class="form-control" min="1" max="50" placeholder="max. 50" id="quantita">
+            <p class="d-none text-danger" id="quantitaError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="quantitaCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-sm-7 col-md-4 mb-2">
+            <label class="form-label">Settore</label>
+            <select id="selectAzie" class="form-select">
+              <option value="0" selected></option>
+              <option value="1">Bar</option>
+              <option value="2">Ristorante</option>
+              <option value="3">Altro</option>
+            </select>
+            <p class="d-none text-danger" id="selectError">Inserire bene i dati</p>
+            <p class="d-none text-success" id="selectCorrect">Dati inseriti correttamente!</p>
+          </div>
+          <div class="col-12 mt-2">
+            <p class="d-none text-danger" id="endAzieError">Non hai inserito i dati correttamente</p>
+            <button type="button" class="btn btn-primary" onclick="checkFormAzie()">Invia richiesta</button>
+          </div>
+        </div>
+        <p class="d-none text-success fw-bold" id="endAzieCorrect">Grazie per la richiesta! Risponderemo entro 24 ore alla email da lei inserito.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/createHeaderAnotherPage.js"></script>
+  <script src="../assets/js/createFooterAnotherPage.js"></script>
+  <script src="../assets/js/bootstrap.bundle.js"></script>
+  <script src="../assets/js/header-hover.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
